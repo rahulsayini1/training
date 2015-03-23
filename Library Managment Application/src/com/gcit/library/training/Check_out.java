@@ -44,7 +44,7 @@ public void checkout(String cardno)
 		stmt.setDate(5, JavaDateObject);
 		stmt.executeUpdate();
 		
-		System.out.println("Successfully inserted");
+		System.out.println("Successfully checked out");
 		}
 	catch (SQLException e) {
 		// TODO Auto-generated catch block

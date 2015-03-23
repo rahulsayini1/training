@@ -25,6 +25,8 @@ class Manage{
 			librarian.librarianmenu();
 		}
 		if(input == 2){
+			Administrator obj = new Administrator();
+			obj.admin();
 			
 		}
 		if(input == 3){

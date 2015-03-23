@@ -9,6 +9,10 @@ public class Librarian {
 		System.out.println("1.Enter the Branch manage");
 		System.out.println("2.Quit ");
 		int input = scan.nextInt();
+		while(input != 1 && input != 2){
+			System.out.println("please enter proper input");
+			input = scan.nextInt();
+		}
 		if(input == 1){
 			Branch branch = new Branch();
 			branch.branch();
