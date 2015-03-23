@@ -1,0 +1,17 @@
+1) select bc.noofcopies from tbl_book_copies bc join tbl_library_branch lb on lb.branchid = bc.branchid join tbl_book b on b.bookid = bc.bookid where b.title = 'java' and lb.branch = 'kent';
+
+2) select bc.noofcopies, lb.branchname from tbl_book_copies bc join tbl_library_branch lb on lb.branchid = bc.branchid join tbl_book b on bookid = bc.bookid where title='java';
+
+3)select name from tbl_borrower where cardno not in (select cardno from tbl_book_loans);
+
+4)select tb.title, tbo.name, tbo.address from tbl_borrower tbo join tbl_book_loans tbl on tbl.cardno = tbo.cardno 
+join tbl_book tb on tb.bookid = tbl.bookid 
+where duedate = curdate() and tb.title = 'java';
+
+5)select lb.branchname, sum(bl.bookid) from tbl_library_branch lb join tbl_book_loans bl on lb.branchid=bl.branchid group by lb.branchname;
+
+6) select b.name,b.address,count(bl.bookid) from tbl_borrower b join tbl_book_loans bl on bl.cardno = b.cardno group by b.name having count(bl.bookid)>1;
+
+7)select b.title, bc.noofcopies from tbl_book b join tbl_book_copies bc on b.bookid = bc.bookid join tbl_library_branch lb on lb.branchid = bc.branchid where branchname = 'kent';
+
+

@@ -27,7 +27,10 @@ class Manage{
 		if(input == 2){
 			
 		}
-		if(input == 3){}
+		if(input == 3){
+			Borrower obj = new Borrower();
+			obj.borrower();
+		}
 		while (input != 1 && input != 2 & input != 3)
 			System.out.println("please enter proper input");
 			input = ipobj.nextInt();

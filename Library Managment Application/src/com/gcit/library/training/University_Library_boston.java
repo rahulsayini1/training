@@ -3,7 +3,7 @@ package com.gcit.library.training;
 import java.util.Scanner;
 
 public class University_Library_boston {
-	public void selection(int branch_id)
+	public void selection(String branch_id)
 	{
 		System.out.println("1)Update the details of the library");
 		System.out.println("2)Add copies of Book to the Branch");
@@ -14,12 +14,18 @@ public class University_Library_boston {
 			System.out.println("please enter proper choice");
 			choice = ip.nextInt();
 		}
-		if(choice == 1){}
+		if(choice == 1){
+			Update_library obj = new Update_library();
+			obj.updatedetails(branch_id);
+		}
 		if(choice == 2){
 			AddCopiesBookBranch obj = new AddCopiesBookBranch();
 			obj.addcopies(branch_id);
 		}
-		if(choice == 3){}
+		if(choice == 3){
+			Librarian obj = new Librarian();
+			obj.librarianmenu();
+		}
 	}
 
 }
