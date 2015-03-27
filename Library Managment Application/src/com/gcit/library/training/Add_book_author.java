@@ -10,11 +10,6 @@ import java.util.Scanner;
 
 public class Add_book_author {
 	
-
-	
-	
-
-	
 public void addbookauthor(){
 	System.out.println("1. Add book");
 	System.out.println("2. Add Author");
